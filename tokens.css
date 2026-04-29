@@ -1,0 +1,121 @@
+/* Design tokens — Cozinha OS
+   Industrial/refeitório kitchen ops. Mobile-first, iOS-native, high contrast. */
+
+:root {
+  /* ── Surfaces ─────────────────────────────────────────────── */
+  --color-background-primary: #F5F5F4;     /* app bg */
+  --color-background-secondary: #EAEAE6;   /* grouped bg */
+  --color-background-elevated: #FFFFFF;    /* cards */
+  --color-background-overlay: rgba(0,0,0,0.42);
+
+  /* ── Text ─────────────────────────────────────────────────── */
+  --color-text-primary: #11110F;
+  --color-text-secondary: #57564F;
+  --color-text-tertiary: #8E8B82;
+  --color-text-inverse: #FFFFFF;
+  --color-text-link: #0A84FF;
+
+  /* ── Borders ──────────────────────────────────────────────── */
+  --color-border-primary: #11110F;
+  --color-border-secondary: rgba(17,17,15,0.16);
+  --color-border-tertiary: rgba(17,17,15,0.08);
+  --color-divider: rgba(17,17,15,0.06);
+
+  /* ── Status (operational) ─────────────────────────────────── */
+  --status-planned-fg: #0A4DA8;
+  --status-planned-bg: #DCEBFF;
+  --status-planned-dot: #0A84FF;
+
+  --status-progress-fg: #7A4A00;
+  --status-progress-bg: #FFE9B8;
+  --status-progress-dot: #F59E0B;
+
+  --status-done-fg: #1F6F3A;
+  --status-done-bg: #D6F0DD;
+  --status-done-dot: #34C759;
+
+  --status-blocked-fg: #5C5A53;
+  --status-blocked-bg: #E5E4E0;
+  --status-blocked-dot: #8E8B82;
+
+  --status-alert-fg: #A8201A;
+  --status-alert-bg: #FFD9D6;
+  --status-alert-dot: #FF3B30;
+
+  /* ── Tag families ─────────────────────────────────────────── */
+  --tag-prep-fg: #0A4DA8;       /* azul · descongelando, marinando */
+  --tag-prep-bg: #DCEBFF;
+  --tag-pre-fg: #5B2EAB;        /* roxo · cortado, porcionado */
+  --tag-pre-bg: #ECE0FF;
+  --tag-ready-fg: #1F6F3A;      /* verde · pronto, reservado */
+  --tag-ready-bg: #D6F0DD;
+  --tag-issue-fg: #A8201A;      /* vermelho · vencido, insuficiente */
+  --tag-issue-bg: #FFD9D6;
+
+  /* ── Spacing ──────────────────────────────────────────────── */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+
+  /* ── Radii ────────────────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+
+  /* ── Typography (mobile, 17 = body) ───────────────────────── */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, monospace;
+
+  /* ── Layout ───────────────────────────────────────────────── */
+  --frame-w: 390px;
+  --frame-h: 844px;
+  --tabbar-h: 84px;
+  --header-h: 56px;
+}
+
+/* ── Reset within the app frame ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+button { font-family: inherit; cursor: pointer; }
+input, textarea { font-family: inherit; }
+
+/* ── Base type classes ──────────────────────────────────────── */
+.t-largeTitle { font-family: var(--font-display); font-size: 34px; font-weight: 700; line-height: 41px; letter-spacing: -0.6px; color: var(--color-text-primary); }
+.t-title1     { font-family: var(--font-display); font-size: 28px; font-weight: 700; line-height: 34px; letter-spacing: -0.4px; color: var(--color-text-primary); }
+.t-title2     { font-family: var(--font-display); font-size: 22px; font-weight: 700; line-height: 28px; letter-spacing: -0.3px; color: var(--color-text-primary); }
+.t-title3     { font-family: var(--font-display); font-size: 20px; font-weight: 600; line-height: 25px; letter-spacing: -0.25px; color: var(--color-text-primary); }
+.t-headline   { font-family: var(--font-sans); font-size: 17px; font-weight: 600; line-height: 22px; letter-spacing: -0.4px; color: var(--color-text-primary); }
+.t-body       { font-family: var(--font-sans); font-size: 17px; font-weight: 400; line-height: 22px; letter-spacing: -0.4px; color: var(--color-text-primary); }
+.t-callout    { font-family: var(--font-sans); font-size: 16px; font-weight: 400; line-height: 21px; letter-spacing: -0.3px; color: var(--color-text-primary); }
+.t-subhead    { font-family: var(--font-sans); font-size: 15px; font-weight: 500; line-height: 20px; letter-spacing: -0.2px; color: var(--color-text-primary); }
+.t-footnote   { font-family: var(--font-sans); font-size: 13px; font-weight: 400; line-height: 18px; letter-spacing: -0.05px; color: var(--color-text-secondary); }
+.t-caption    { font-family: var(--font-sans); font-size: 12px; font-weight: 500; line-height: 16px; letter-spacing: 0px; color: var(--color-text-tertiary); }
+.t-overline   { font-family: var(--font-sans); font-size: 11px; font-weight: 700; line-height: 14px; letter-spacing: 0.6px; color: var(--color-text-tertiary); text-transform: uppercase; }
+.t-mono       { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+.txt-secondary { color: var(--color-text-secondary); }
+.txt-tertiary  { color: var(--color-text-tertiary); }
+.txt-primary   { color: var(--color-text-primary); }
+
+/* ── Surface helpers ────────────────────────────────────────── */
+.surface { background: var(--color-background-elevated); border-radius: var(--radius-lg); }
+.divider { height: 0.5px; background: var(--color-divider); }
+
+/* Reset list/button */
+ul, ol { list-style: none; padding: 0; margin: 0; }
+button.bare { background: transparent; border: 0; padding: 0; color: inherit; }
+
+/* No native scrollbars inside the frame */
+.kitchen-app *::-webkit-scrollbar { display: none; }
+.kitchen-app * { scrollbar-width: none; }
+
+/* Transition utilities */
+.fade-up-enter { animation: fadeUp 0.32s cubic-bezier(0.2,0.7,0.2,1) both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
