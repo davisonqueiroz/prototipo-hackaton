@@ -1,3 +1,5 @@
+import React from 'react';
+
 // screens.jsx — All screens for Cozinha OS
 // Each screen is a function component receiving { nav, state, setState }
 

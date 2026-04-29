@@ -1,3 +1,5 @@
+import React from 'react';
+
 // app.jsx — shell, navigation stack, route map for both prototype and canvas
 
 // ─────────────────────────────────────────────────────────────

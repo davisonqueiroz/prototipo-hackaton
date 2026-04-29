@@ -1,3 +1,5 @@
+import React from 'react';
+
 // components.jsx — shared building blocks for Cozinha OS
 // All components are written for a 390px iPhone frame.
 

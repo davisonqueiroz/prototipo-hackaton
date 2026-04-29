@@ -1,11 +1,16 @@
-# Cozinha OS – Gestão Operacional
+# Cozinha OS - Gestão Operacional
 
-Abra `index.html` diretamente no navegador ou rode um servidor local:
+Instale as dependências e rode o servidor local do Vite:
 
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-Depois acesse: http://localhost:8000
+Para gerar a versão de produção usada pela Vercel:
+
+```bash
+npm run build
+```
 
 A aplicação mantém o layout mobile como base visual, expande para tablet sem moldura de celular e usa menu lateral no desktop.
