@@ -1,4 +1,4 @@
-# Cozinha OS - Protótipo responsivo
+# Cozinha OS – Gestão Operacional
 
 Abra `index.html` diretamente no navegador ou rode um servidor local:
 
